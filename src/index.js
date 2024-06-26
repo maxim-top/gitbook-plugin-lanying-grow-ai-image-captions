@@ -4,6 +4,7 @@ var cheerio = require('cheerio');
 var Q = require('q');
 
 var PLUGIN_NAME = 'image-captions';
+var globalImages = [];
 
 var onInit = function (gitbook) {
   var config = readConfig(gitbook);
@@ -29,18 +30,15 @@ var getConfigValue = function (gitbook, expression, def) {
 
 var readConfig = function (gitbook) {
   var config = getConfigValue(gitbook, 'pluginsConfig', {})[PLUGIN_NAME] || {};
-  // set name of variable with images (available later for images list)
-  config.variable_name = config.variable_name || '_pictures';
   return config;
 };
 
 var persistImagesInConfig = function (gitbook, config, images) {
-  gitbook.config.set(['variables', config.variable_name], images); // side effect!
+  globalImages = images;
 };
 
 var readImagesFromConfig = function (gitbook) {
-  var pluginConfig = readConfig(gitbook);
-  return gitbook.config.get(['variables', pluginConfig.variable_name]);
+  return globalImages;
 };
 
 function getCaptionTemplate (imageKey, options, captionVarName) {

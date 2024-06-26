@@ -1,5 +1,5 @@
 {
-  "name": "gitbook-plugin-image-captions",
+  "name": "gitbook-plugin-lanying-grow-ai-image-captions",
   "description": "Image captions plugin for GitBook",
   "main": "src/index.js",
   "version": "3.1.0",
@@ -13,14 +13,14 @@
   "engines": {
     "gitbook": "^3"
   },
-  "homepage": "https://github.com/todvora/gitbook-plugin-image-captions",
+  "homepage": "https://github.com/maxim-top/gitbook-plugin-lanying-grow-ai-image-captions",
   "repository": {
     "type": "git",
-    "url": "https://github.com/todvora/gitbook-plugin-image-captions.git"
+    "url": "https://github.com/maxim-top/gitbook-plugin-lanying-grow-ai-image-captions.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/todvora/gitbook-plugin-image-captions/issues"
+    "url": "https://github.com/maxim-top/gitbook-plugin-lanying-grow-ai-image-captions/issues"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
